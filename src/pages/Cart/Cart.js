@@ -14,9 +14,12 @@ export default function Cart() {
   const [data, setData] = useState(dataBag);
   let total = 0;
   const totalPrice = () => {
-    dataBag.forEach((element) => {
-      total += Number(element.price);
+    if(data && data.length >= 1){
+      data.forEach((element) => {
+      return total += Number(element.price);
     });
+    }
+    return total
   };
   totalPrice();
 
@@ -42,7 +45,7 @@ export default function Cart() {
         <h2>Your Bag</h2>
       </section>
       <section className='cartDefault'>
-        {data.length >= 1 ? (
+        {data && data.length >= 1 ? (
           <>
             <section>
               <DataTable
@@ -67,7 +70,7 @@ export default function Cart() {
         )}
       </section>
       <section className='cartResponsive'>
-        {data.length >= 1 ? (
+        {data && data.length >= 1 ? (
           <>
             <CartResponsive data={data} />
             <section className='cart-total-price'>

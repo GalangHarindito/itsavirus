@@ -8,7 +8,7 @@ const Suspensed = (Element) => function suspense(props) {
   );
 };
 
-export default {
+export const lazyLoad =  {
   Product: Suspensed(React.lazy(() => import('./Product'))),
   DetailShoes: Suspensed(React.lazy(() => import('./DetailShoes'))),
   Cart: Suspensed(React.lazy(() => import('./Cart'))), 
