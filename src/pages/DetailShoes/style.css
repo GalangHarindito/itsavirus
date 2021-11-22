@@ -35,7 +35,7 @@ grid-row-gap: 2rem;
 .description-shoes > div:nth-child(3) > p {
   font-weight: 400;
   padding-bottom: 0.9rem;
-  opacity: 70%;
+  opacity: 0.6;
 }
 
 .description-shoes > div:nth-child(4) {
