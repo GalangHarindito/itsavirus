@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { routes } from "./configs";
 import pages from "./pages";
 import PageBase from "./component/layout/PageBase";
-import Header from "./component/Header";
 
 function App({ history, store }) {
 

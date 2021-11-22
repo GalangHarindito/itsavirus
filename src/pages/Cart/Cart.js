@@ -22,7 +22,7 @@ export default function Cart() {
 
   useEffect(() => {
     dispatch(successAction(data, ""));
-  }, []);
+  }, [data, dispatch]);
 
   function successAction(data, key) {
     return { type: SUCCESS, data, key };

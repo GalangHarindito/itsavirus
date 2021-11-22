@@ -10,7 +10,6 @@ import "./style.css";
 import RadioCustom from "../../component/elements/RadioCustom";
 import icDelivery from "../../assets/ic-delivery.svg";
 import { price } from "../../utils/format";
-import { Link } from "react-router-dom";
 
 export default function DetailShoes() {
   const dispatch = useDispatch();
@@ -20,7 +19,6 @@ export default function DetailShoes() {
   const { id } = queryString.parse(location.search.replace("?", ""));
   const [userSize, setUserSize] = useState("");
   const [userColor, setUserColor] = useState("");
-  const [userBag, setUserBag] = useState({});
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
@@ -33,11 +31,7 @@ export default function DetailShoes() {
 
   useEffect(() => {
     dispatch(getAllProducts());
-  }, []);
-
-  //const sizeUser = () => {
-  //  setChecked()
-  //}
+  }, [dispatch]);
 
   return (
     <section className='detail-shoes'>
@@ -57,7 +51,7 @@ export default function DetailShoes() {
               <p>{data[id].description}</p>
             </div>
             <div>
-              <a href={data[id].video} target='_blank'>
+              <a href={data[id].video} target='_blank' rel="noreferrer">
                 <img src={icPlay} alt='' />
               </a>
               <p>PLAY VIDEO</p>
