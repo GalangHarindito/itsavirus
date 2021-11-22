@@ -1,0 +1,57 @@
+table > thead > tr {
+  background-color: #FAFAFA;
+}
+
+table > thead > tr > th {
+  padding: 0.7rem;
+  font-weight: normal;
+}
+
+table > thead > tr > th:first-child {
+  width: 50rem;
+}
+
+table > tbody > tr > td:not(.bag-detail) {
+  text-align: center;
+}
+
+.bag-detail {
+  display: flex;
+  align-items: center;
+}
+
+.bag-detail > section{
+  padding: 0 1rem;
+}
+
+.bag-detail > section:nth-child(2) > img{
+  width: 7rem;
+}
+
+.bag-detail > section:nth-child(3) > h5{
+  font-weight: 600;
+}
+
+.bag-detail > section:nth-child(3) > section{
+  display: flex;
+
+}
+
+.bag-detail > section:nth-child(3) > section > p{
+  margin-right: 1rem;
+
+}
+.bag-detail > section:nth-child(3) > section > div{
+  display: flex;
+
+}
+.bag-detail > section:nth-child(3) > section > div > p{
+  margin-right: 0.3rem;
+
+}
+
+@media screen and (max-width: 700px) {
+  .bag-detail > section:nth-child(2) > img{
+    width: 40%;
+  }
+}

@@ -1,0 +1,48 @@
+.card-shoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-shoes-container {
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.shoes-list{
+  padding-top: 0.3rem;
+}
+
+.shoes-list > div {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.shoes-list > div > h6 {
+  font-weight: 500;
+  align-self: center;
+}
+
+.shoes-list > div > h6:last-child {
+  justify-self: flex-end;
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 70%;
+}
+
+.shoes-list > p {
+  justify-self: flex-end;
+  font-size: 0.7rem;
+  opacity: 70%;
+}
+
+@media screen and (max-width: 700px) {
+  .card-shoes-container {
+    padding: 1rem;
+  }
+}
+
+

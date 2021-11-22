@@ -1,0 +1,175 @@
+.detail-shoes{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr 0.3fr 0.2fr;
+grid-template-areas:
+'area1 area2'
+'area3 area3'
+'area4 area4';
+grid-column-gap: 0px;
+grid-row-gap: 2rem;
+}
+.image-shoes{
+  justify-self: center;
+  grid-area: area1;
+}
+.image-shoes > img{
+  width: 25rem;
+}
+
+.description-shoes{
+  padding-top: 3rem;
+  grid-area: area2;
+}
+
+.description-shoes > div:nth-child(1) > p {
+  padding-bottom: 0.2rem;
+  color: var(--font-decription);
+}
+
+.description-shoes > div > h3 {
+  font-weight: 700;
+  padding-bottom: 0.4rem;
+}
+
+.description-shoes > div:nth-child(3) > p {
+  font-weight: 400;
+  padding-bottom: 0.9rem;
+  opacity: 70%;
+}
+
+.description-shoes > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.8rem;
+
+}
+
+.description-shoes > div:nth-child(4) > a > img {
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.description-shoes > div:nth-child(4) > a > img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.description-shoes > div:nth-child(5) {
+  padding-bottom: 0.5rem;
+}
+
+.image-detail-shoes {
+  justify-self: flex-start;
+  padding-left: 9rem;
+  display: flex;
+  grid-area: area3;
+}
+
+.size-user{
+  display: flex;
+  flex-wrap: wrap;
+  width: 18rem;
+}
+
+.size-user > div{
+  padding: 0.4rem;
+}
+
+.add-bag{
+  grid-area: area4;
+  justify-items: center;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.add-bag > div:first-child{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 20rem;
+}
+
+.add-bag > div > img{
+  padding-right: 1rem;
+  width: 2.5rem;
+}
+
+.add-bag > div > p{
+  font-size: 0.765rem;
+}
+
+.add-bag > div:last-child {
+  background-color: #000;
+}
+
+.add-bag > div:last-child > h5 {
+  color: #fff;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.no-detail{
+  background-color: gray;
+  padding: 1.3rem;
+  margin-right: 1rem;
+}
+
+.disabled{
+  background-color: #f3f3f3;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .detail-shoes{
+    display: block;
+    }
+
+    .image-shoes > img{
+      width: 100%;
+    }
+
+    .description-shoes {
+      padding-top: 1rem;
+  }
+
+  .image-detail-shoes{
+    padding-left: 0;
+  }
+
+  .image-detail-shoes > img{
+    padding-top: 1rem;
+    width: 20%;
+  }
+
+  .add-bag{
+    margin: 1rem 0;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .add-bag > div > img {
+    padding-right: 0.5rem;
+    width: 1.5rem;
+}
+
+.add-bag > div:last-child {
+  margin-top: 0.7rem;
+}
+
+.add-bag > div:last-child > h5 {
+  padding: 0.5rem;
+}
+
+.no-detail{
+  padding: 0.5rem;
+  font-size: 0.865rem;
+}
+}

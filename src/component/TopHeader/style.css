@@ -1,0 +1,76 @@
+.top-header {
+  grid-area: topHeader;
+  background-color: var(--top-header);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 0.3rem 0;
+}
+
+.top-header > section {
+  align-self: center;
+  justify-self: center;
+  
+}
+
+.top-header > section:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+
+.top-header > section:nth-child(3) > div > a {
+  padding: 0 0.5rem;
+  font-size: 0.865rem;
+  line-height: 1.3rem;
+}
+
+.top-header > section:nth-child(2) > img {
+  padding-right: 0.5rem;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .top-header {
+    display: grid;
+    grid-template-columns: 1fr;
+grid-template-rows: repeat(3, 1fr);
+grid-template-areas: 
+'area2'
+'area3'
+'area1';
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+  }
+
+  .top-header > section:nth-child(1) {
+    justify-self: center;
+    grid-area: area1;
+  }
+  
+  .top-header > section:nth-child(3) {
+    justify-self: center;
+    grid-area: area3;
+  }
+  .top-header > section:nth-child(2) {
+    justify-self: center;
+    grid-area: area2;
+  }
+
+  .top-header > section:nth-child(3) > div > a {
+    font-size: 0.665rem;
+  }
+  
+  /*.top-header > section:nth-child(3) {
+    justify-self: center;
+  }
+  
+  .top-header > section {
+    align-self: center;
+    justify-self: center;
+  }*/
+}

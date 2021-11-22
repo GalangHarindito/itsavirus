@@ -1,0 +1,16 @@
+.main {
+  grid-area: main;
+  overflow: hidden auto;
+  padding: 2rem;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    grid-area: main;
+    overflow: hidden auto;
+    padding: 1rem;
+    position: relative;
+  }
+}
+

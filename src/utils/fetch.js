@@ -1,0 +1,1 @@
+export const BASIC_URL = 'https://my-json-server.typicode.com/megasuartika/fe-assignment/db';

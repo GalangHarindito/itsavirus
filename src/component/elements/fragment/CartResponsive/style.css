@@ -1,0 +1,43 @@
+@media screen and (max-width: 700px) {
+section > h3 {
+  text-align: center;
+  background-color: var(--top-header);
+  margin-bottom: 0.4rem;
+}
+
+  .cart-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .cart-responsive > img {
+    padding-right: 0.3rem;
+  }
+
+  .cart-responsive > img:nth-child(2) {
+    width: 5rem;
+  }
+
+  .cart-responsive > div > div:nth-child(1) > section {
+    display: flex;
+  }
+
+  .cart-responsive > div > div:nth-child(1) > section > div {
+    display: flex;
+    
+  }
+
+
+  .cart-responsive > div > div:nth-child(1) > section > p {
+    padding-right: 0.3rem;
+    
+  }
+
+  .cart-responsive > div > div:nth-child(1) > section > div > p {
+    padding-right: 0.3rem;
+    
+  }
+
+}
