@@ -5,12 +5,14 @@ import "./style.css";
 import icNike from "../../assets/ic-nike.svg";
 import icShoppingBag from "../../assets/ic-shopping-bag.svg";
 import icUser from "../../assets/ic-user.svg";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const [menuBar, setMenuBar] = useState(false);
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
+  const {data} = useSelector(s => s.cart)
   const menuButton = () => {
     setMenuBar(!menuBar);
   };
@@ -55,7 +57,7 @@ export default function Header() {
                 <Link to='/cart'>
                   <img src={icShoppingBag} alt='shopping-bag' />
 
-                  {totalBag && totalBag.length >= 1 && <label>{totalBag.length}</label>}
+                  {data && data.length >= 1 && <label>{totalBag.length}</label>}
                 </Link>
               </li>
               <li>
