@@ -7,13 +7,16 @@ grid-row-gap: 2rem;
 }
 
 .cart > section{
-  justify-self: center;
   align-self: center;
 }
 
 .cart-total-price {
   float: right;
   width: 20rem;
+}
+
+.cart > section > h2 {
+  text-align: center;
 }
 
 .total-price {

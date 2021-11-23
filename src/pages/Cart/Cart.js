@@ -72,7 +72,7 @@ export default function Cart() {
       <section className='cartResponsive'>
         {data && data.length >= 1 ? (
           <>
-            <CartResponsive data={data} />
+            <CartResponsive data={data} onDelete={(value) => onDelete(value)} />
             <section className='cart-total-price'>
               <div className='total-price'>
                 <h6>TOTAL</h6>

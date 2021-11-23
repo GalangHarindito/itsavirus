@@ -7,7 +7,7 @@ section > h3 {
 
   .cart-responsive {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 0.5rem 0;
   }

@@ -5,7 +5,7 @@ import { dataShoes } from "../../../../utils/productImage";
 import { price } from "../../../../utils/format";
 
 export default function CartResponsive(props) {
-  const { data } = props;
+  const { data, onDelete } = props;
   return (
     <section>
       <h3>Product</h3>
@@ -13,7 +13,7 @@ export default function CartResponsive(props) {
         return (
           <div key={idx} className='cart-responsive'>
            
-              <img src={icClose} alt='ic-close' />
+              <img src={icClose} alt='ic-close' onClick={() => onDelete(idx)} />
               <img src={dataShoes[el.id].shoes} alt={`img-${el.id}`} />
               <div>
               <div>
@@ -47,7 +47,7 @@ export default function CartResponsive(props) {
           </div>
         );
       })}
-      
+
     </section>
   );
 }

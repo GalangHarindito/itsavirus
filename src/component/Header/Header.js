@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import "./style.css";
@@ -6,6 +6,7 @@ import icNike from "../../assets/ic-nike.svg";
 import icShoppingBag from "../../assets/ic-shopping-bag.svg";
 import icUser from "../../assets/ic-user.svg";
 import { useSelector } from "react-redux";
+import useOutsideClick from './useOutsideClick';
 
 export default function Header() {
   const [menuBar, setMenuBar] = useState(false);
@@ -16,6 +17,11 @@ export default function Header() {
   const menuButton = () => {
     setMenuBar(!menuBar);
   };
+  const ref = useRef();
+
+useOutsideClick(ref, () => {
+  if (menuBar) setMenuBar(false);
+});
 
 
   const totalBag = JSON.parse(sessionStorage.getItem('test'))
@@ -32,7 +38,7 @@ export default function Header() {
           <div className='bar2'></div>
           <div className='bar3'></div>
         </div>
-          <div className={`nav-menu ${menuBar ? "block" : "none"}`}>
+          <div className={`nav-menu ${menuBar ? "block" : "none"}`} ref={ref}>
             <ul>
               <li className={splitLocation[1] === "" || splitLocation[1] === "product" || splitLocation[1] === "cart"  ? "active" : ""}>
                 <Link to='/'>New Release</Link>
